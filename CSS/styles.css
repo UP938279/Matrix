@@ -1,0 +1,94 @@
+/* class identified by    .classname -->*/
+
+.multiplyTable{padding-right: 35px;}
+
+
+.calcbuttons2x2{
+  background-color: red;
+
+  padding: 0;
+  border: 0;
+  min-width: 100px;
+
+}
+
+
+
+.calcbuttonsrow1{
+min-width: 1000px;
+}
+
+.hrstyle{
+  border-style: none;
+  border-top-style: dotted;
+  color: #2C2B9C;
+  border-width: 100px;
+  width:10%
+}
+
+
+table{
+  border: 5px;
+
+}
+
+
+
+.link{
+color: #EEEEEE
+ }
+
+ .link:hover{
+color: #DA1212
+
+  }
+
+  .matrices{
+  width:30%;
+  text-align: center;
+  }
+
+
+.centre {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+.btn{
+  /*puts all in one line when in an average (15.6 inch) or larger screen*/
+  margin:10px 1px 10px 1px;
+  padding:10px;
+}
+
+body{
+  background-color: #F6F2D4;
+  margin: 0;
+}
+
+h1{
+  color: #2C2B9C;
+  margin-top:0;
+}
+
+
+
+/* hr{
+  border-style: none;
+  border-top-style: dotted;
+  border-color: #2C2B9C;
+  border-width: 5px;
+} */
+
+img{
+height:200px;
+}
+
+
+div{
+  margin: 0;
+}
+
+button{
+  margin: 20px 20px 20px 20px;
+}
