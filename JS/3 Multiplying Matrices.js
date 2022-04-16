@@ -34,3 +34,6 @@ calculator3x3.onclick = function () {
 quiz.onclick = function () {
   document.location ='8 Quiz section.html';
 }
+circuitCalculator.onclick = function(){
+  document.location = '9 Circuit Calculator.html';
+}

@@ -19,7 +19,11 @@ determinant.onclick = function () {
 }
 
 cramersrule.onclick = function () {
-  document.location ='5 Cramers Rule.html';
+  document.location ='4 The Determinant and Inverse.html';
+}
+
+engineering.onclick = function () {
+  document.location ='6 Applying Matrices to Engineering.html';
 }
 
 calculator2x2.onclick = function () {
@@ -34,6 +38,6 @@ quiz.onclick = function () {
   document.location ='8 Quiz section.html';
 }
 
-circuitCalculator.onclick = function(){
-  document.location = '9 Circuit Calculator.html';
+circuit.onclick = function () {
+  document.location ='9 Circuit Calculator.html';
 }

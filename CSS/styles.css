@@ -1,38 +1,67 @@
 /* class identified by    .classname -->*/
 
-.multiplyTable{padding-right: 35px;}
+.smallerInput  {
+  width: 3em;
+}
+
+table {
+  border: 2px;
+}
+
+.centre {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+.answers{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.matrixACSS {  margin-left: 25%;
+  margin-right: auto;
+  float: left;
+}
+
+.matrixBCSS {  margin-left: auto;
+  margin-right: 25%;
+
+}
+
+.multiplyTable {padding-right: 30px;}
 
 
-.calcbuttons2x2{
+.calcbuttons2x2 {
   background-color: red;
-
   padding: 0;
   border: 0;
-  min-width: 100px;
-
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-
-.calcbuttonsrow1{
-min-width: 1000px;
+.calcbuttons3x3 {
+  background-color: red;
+  padding: 0;
+  border: 0;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  /* min-width: 100px; */
 }
 
-.hrstyle{
+.calcbuttonsrow1 {
+width: 80px;
+}
+
+.hrstyle {
   border-style: none;
   border-top-style: dotted;
   color: #2C2B9C;
   border-width: 100px;
-  width:10%
+  width:10%;
 }
-
-
-table{
-  border: 5px;
-
-}
-
-
 
 .link{
 color: #EEEEEE
@@ -47,13 +76,6 @@ color: #DA1212
   width:30%;
   text-align: center;
   }
-
-
-.centre {
-margin-left: auto;
-margin-right: auto;
-text-align: center;
-}
 
 .btn{
   /*puts all in one line when in an average (15.6 inch) or larger screen*/
@@ -89,6 +111,6 @@ div{
   margin: 0;
 }
 
-button{
+/* button{
   margin: 20px 20px 20px 20px;
-}
+} */

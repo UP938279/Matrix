@@ -34,6 +34,6 @@ quiz.onclick = function () {
   document.location ='8 Quiz section.html';
 }
 
-circuit.onclick = function () {
-  document.location ='9 Circuit Calculator.html';
+circuitCalculator.onclick = function(){
+  document.location = '9 Circuit Calculator.html';
 }

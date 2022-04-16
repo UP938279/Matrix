@@ -6,10 +6,6 @@
 
 <head>
   <meta charset="utf-8">
-  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=IKJcV5hQ09hdo1tX5Ie7PNY2RuujshcUNaqFGJLk5MZ6jFSLwm-2yll6ezPc9pCiAltTzDFStAugSexj4_ORVZWyke4ZXJkiwrCdztQTxKo"
-    charset="UTF-8"></script>
-
-
 </head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -34,6 +30,7 @@ equation mode - don't want everything on the same line -->
 </head>
 
 <body>
+  <h1>TEST TEST TEST</h1>
   <div class="navbar bg-dark">
 
     <!--  to make a different background colour for the nav bar, use style="background-color: #D77FA1; -->
@@ -70,9 +67,14 @@ equation mode - don't want everything on the same line -->
     <button id="quiz" class="btn btn-primary">
       Quiz Section
     </button>
+    <button id="circuitCalculator" class="btn btn-primary">
+      Circuit Calculator
+    </button>
 
   </div>
 
+  <h1>TEST TEST TEST</h1>
+  <h1>TEST TEST TEST</h1>
 
   <div class="matrices">
 
@@ -238,25 +240,71 @@ equation mode - don't want everything on the same line -->
 
     </table>
 
-\begin{bmatrix} a$$"ans1_1"$$& b\\ c & d\end{bmatrix}$
+<p id="ansMathJaxMatrix" style="display: block;">
 
-<p id="test" class="test" >
-abcd
 </p>
-<p id="test1" class="test1" >
-kfng
-</p>
+
+    \begin{bmatrix} a$$"ans1_1"$$& b\\ c & d\end{bmatrix}$
+    <br><br>
+    <h1>mathjax test</h1>
+    <br><br>
+
+    \begin{bmatrix} a + ans1_1.value + b\\ c & d\end{bmatrix}
+
+    <br><br>
+    <h1>mathjax test</h1>
+    <p id="test" class="test">
+      abcd
+    </p>
+    <p id="test1" class="test1">
+      kfng
+    </p>
 
 
     <p id="determinantAns" class="determinantAns">
     </p>
 
-      <button type="button" class="btn btn-primary" id="showSteps">Show Steps</button>
 
 
-<p class="invisible">Write Steps</p>
+
+
   </div>
+  <div id="stepsDiv" class="invisibleSteps">
+      <button type="button" id=stepsOneButton class="btn btn-primary" style="display: none;">Show Steps</button>
 
+    <p class="steps1" class="btn btn-primary" id="stepsOne" style="display: none;">
+      Steps 1
+      </p>
+      <button type="button" class="btn btn-primary" class="steps" id="stepsTwoButton" style="display: none;">Show Second Step</button>
+
+    <p class="steps2" id="stepsTwo" style="display: none;">
+      Steps 2
+      </p>
+      <button type="button" class="btn btn-primary" class="steps" id="stepsThreeButton" style="display: none;">Show Third Step</button>
+
+    <p class="steps3" id="stepsThree" style="display: none;">
+      Steps 3
+      <br>
+      </p>
+      <button type="button" class="btn btn-primary" class="steps" id="stepsFourButton" style="display: none;">Show Fourth Step</button>
+
+
+    <p class="steps4" id="stepsFour" style="display: none;">
+      Steps 4
+      <br>
+  </p>
+  <button type="button" class="btn btn-primary" class="steps" id="stepsFiveButton" style="display: none;">Show Fifth Step</button>
+
+
+    <p id="stepsFive" class="steps5" style="display: none;">
+      Steps 5
+      <br>
+        </p>
+        <button type="button" class="btn btn-primary" class="steps" id="stepsSixButton" style="display: none;">Show Sixth Step</button>
+
+
+
+  </div>
 
 
   <hr>

@@ -10,8 +10,8 @@ addsubtractmatrices.onclick = function () {
   document.location ='2 Adding and Subtracting Matrices.html';
 }
 
-multiplymatrices.onclick = function () {
-  document.location ='3 Multiplying Matrices.html';
+multiplymatrices.onclick = function() {
+  document.location = '3 Multiplying Matrices.html';
 }
 
 determinant.onclick = function () {
@@ -34,6 +34,6 @@ quiz.onclick = function () {
   document.location ='8 Quiz section.html';
 }
 
-circuit.onclick = function () {
-  document.location ='9 Circuit Calculator.html';
+circuitCalculator.onclick = function(){
+  document.location = '9 Circuit Calculator.html';
 }
