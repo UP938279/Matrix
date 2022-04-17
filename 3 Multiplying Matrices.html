@@ -35,7 +35,7 @@
 </head>
 
 <body>
-<div class="navbar bg-dark" style=" position: sticky; top: 00px;">
+<div class="navbar bg-dark" >
 
     <!--  to make a different background colour for the nav bar, use style="background-color: #D77FA1; -->
 
@@ -75,15 +75,20 @@
     </button>
 
   </div>
-  <a href="#multiplybyscalar">How to Multiply a Matrix with a Scalar</a><br>
-  <a href="#multiplybymatrix">How to Multiply a Matrix with Another Matrix</a><br>
-  <a href="#example3x3Multiply">A Worked Example of How to Multiply a Matrix with Another Matrix</a><br>
-  <a href="#AxBdoesnotequalBxA">A x B ≠ B x A - Why it matters which Matrix is A and which is B</a>
 
+<div class="topics">
+  <h2 id="top">Topics on this page</h2>
+  <button class="btn btn-primary" onclick="topFunction()" class="topButton" id="topButton" style="position:fixed;bottom: 20px; right: 30px; display:none;">Return to the top of the page</button>
 
+<button class="btn btn-primary"><a href="#multiplybyscalar" style="color: white;">How to Multiply a Matrix with a Scalar</a></button>
+<button class="btn btn-primary"><a href="#multiplybymatrix" style="color: white;">How to Multiply a Matrix with Another Matrix</a></button>
+<button class="btn btn-primary"><a href="#example3x3Multiply" style="color: white;">A Worked Example of How to Multiply a Matrix with Another Matrix</a></button>
+<button class="btn btn-primary"><a href="#AxBdoesnotequalBxA" style="color: white;">A x B ≠ B x A - Why it matters which Matrix is A and which is B</a></button>
+
+</div>
 
   <div class="multiplyByScalarDescription">
-    <h2 id=multiplybyscalar>How to Multiply by a Scalar</h2>
+    <h2 id=multiplybyscalar class="anchor">How to Multiply by a Scalar</h2>
     <p>
       A matrix can be multiplied by a scalar, $\lambda$ (real number). You do this by multiplying every element by $\lambda$. The final matrix has the same dimensions as the original matrix.
       <br><br>
@@ -105,7 +110,7 @@
 
 
   <div class="multiplyByMatrixDescription">
-    <h2 id=multiplybymatrix>How to Multiply with Another Matrix</h2>
+    <h2 id=multiplybymatrix class="anchor">How to Multiply with Another Matrix</h2>
     <p>
       For the matrix $AB$ to exist, the number of columns ($n$) in Matrix $A$ must be equal to the number of rows ($m$) in Matrix $B$.
       This will give a matrix with dimensions $m$ x $l$.
@@ -165,7 +170,8 @@
   <br>
   <br>
 
-  <p id=example3x3Multiply>
+<h3 id=example3x3Multiply class="anchor">An example</h3>
+  <p>
 
     Let's do an example with numbers, to try and make things clearer.
     <br>
@@ -184,7 +190,7 @@
   </p>
 
   <div class="AxBdoesnotequalBxADescription">
-    <h2 id=AxBdoesnotequalBxA>A x B ≠ B x A</h2>
+    <h2 id=AxBdoesnotequalBxA class="anchor">A x B ≠ B x A</h2>
     <p>
       It is <em>vital</em> to note that multiplying A x B does not equal B x A. Because of the way that it is calculated, the resultant
       matrix will <i>likely</i> be different. Depending upon what numbers are in each matrix, it may be possible to get the same resultant

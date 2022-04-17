@@ -21,7 +21,7 @@
 </head>
 
 <body>
-<div class="navbar bg-dark" style="position: sticky; top: 00px;">
+<div class="navbar bg-dark">
 
     <!--  to make a different background colour for the nav bar, use style="background-color: #D77FA1; -->
 
@@ -61,18 +61,27 @@
 
   </div>
 
-  <br>
-  <a href="#addingmatrices">Click here for adding matrices</a>
-  <p>
-    <a href="#subtractingmatrices">Click here for subtracting matrices</a>
-  </p>
+  <div class="topics">
+    <h2 id="top">Topics on this page</h2>
+    <button class="btn btn-primary" onclick="topFunction()" class="topButton" id="topButton" style="position:fixed;bottom: 20px; right: 30px; display:none;">Return to the top of the page</button>
+
+  <button class="btn btn-primary">
+    <a href="#addingmatrices" style="color: white;">Click here for adding matrices</a>
+  </button>
+  <button class="btn btn-primary">
+    <a href="#subtractingmatrices" style="color: white;">Click here for subtracting matrices</a>
+  </button>
+</div>
+
   <p>
     If matrices are of the same size, they can be easily added or subtracted to or from each other.
     This is done element by element.
     The final matrix will be have the same dimensions as the starting matrices.
   </p>
 
-  <h2 id=addingmatrices>Adding Matrices</h2>
+<div>
+
+  <h2 id=addingmatrices class="anchor">Adding Matrices</h2>
 
   <p>
     We start with Matrix <i>A</i>:&ensp;&ensp;&ensp;
@@ -91,8 +100,8 @@
     <br><br>
     We will add element by element
     <br>
-    <i>A</i> + <i>B</i> =
-    $\begin{bmatrix} a{_1}{_,}{_1} + b{_1}{_,}{_1} & a{_1}{_,}{_2} +
+    $A+ B =
+    \begin{bmatrix} a{_1}{_,}{_1} + b{_1}{_,}{_1} & a{_1}{_,}{_2} +
     b{_1}{_,}{_2}\\ a{_2}{_,}{_1} + b{_2}{_,}{_1}& a{_2}{_,}{_2} + b{_2}{_,}{_2}\end{bmatrix}$
 
     <br><br>
@@ -113,10 +122,10 @@
 
     $\begin{bmatrix} 6 & 8 \\ 10 & 12\end{bmatrix}$
   </p>
-
+</div>
 <br><br><br>
 
-  <h2 id=subtractingmatrices>Subtracting Matrices</h2>
+  <h2 id=subtractingmatrices class="offset">Subtracting Matrices</h2>
   Again, we do this element by element.
 <br><br>
   $\begin{bmatrix} a{_1}{_,}{_1} & a{_1}{_,}{_2}\\ a{_2}{_,}{_1} & a{_2}{_,}{_2}\end{bmatrix} -

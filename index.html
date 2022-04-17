@@ -21,7 +21,7 @@
 </head>
 
 <body>
-<div class="navbar bg-dark" style="position: sticky; top: 00px;">
+<div class="navbar bg-dark" >
     <!--  to make a different background colour for the nav bar, use style="background-color: #D77FA1; -->
 
     <button id="welcome" class="btn btn-primary">
@@ -61,20 +61,18 @@
     </button>
 
   </div>
+  <div class="topics">
 
-  <!-- background color is CSS rather than HTML. I have used a Hexadecimal value for this colour-->
-  <hr size="5">
-  <!--<img src="Matrix Website Images/IMG_4322.jpg" alt="Portsmouth University Logo">-->
-  <!--Enters an image. This alternate description will be used by serach engines etc to assist with indexing and working out what your website is about-->
+    <h2 id="top">Topics on this page</h2>
+  <button class="btn btn-primary" onclick="topFunction()" class="topButton" id="topButton" style="position:fixed;bottom: 20px; right: 30px; display:none;">Return to the top of the page</button>
 
-  <h1>Matrices are fun</h1>
+  <button class="btn btn-primary"><a href="#whatisamatrix" style="color: white;">What is a Matrix?</a></button>
+  <button class="btn btn-primary"><a href="#howtolabelamatrix" style="color: white;">How do we Label Matrices?</a></button>
+  <button class="btn btn-primary"><a href="#whatcanwedo" style="color: white;">What can we do with a Matrix?</a></button>
+  <button class="btn btn-primary"><a href="#specialmatrices" style="color: white;">Special types of Matrix</a></button>
 
-  <hr size="3">
-  <p>
-    <!-- <p>  </p> is a paragraph tab -->
-    <em>This is the dissertation project of <strong>UP938279</strong>. It is supervised by <a href="https://www.port.ac.uk/about-us/structure-and-governance/our-people/our-staff/john-geddes">Dr John Geddes</a>
-      of the University of Portsmouth.</em>
-  </p>
+  </div>
+  <h1>Welcome</h1>
   <p>
     This website is designed to help you learn matrices. It is not a true standalone tool - it is to assist with other forms of teaching.
     It is recommended that you start with what a matrix is, before moving on to adding or subtracting matrices. The contents list below suggests
@@ -89,62 +87,66 @@
 
   <h5>Contents</h5>
 
-
-
-
-  <!-- Bulletpoints would be  <ul>
-    <li>  </li>
-    <li>  </li>
-  </ul>
-
-However I want to list in order of the suggested lessons plans -->
   <ol>
-    <li><a href="1 Introduction to matrices.html" text-decoration: none;>What is a matrix? Why should you care?</a></li>
+
+      <button class="btn btn-primary"><a href="1 Introduction to matrices.html" style="color: white;">What is a matrix?</a></button>
     <p>
       An introduction to matrices, covering what they are and how we describe them.
     </p>
-    <li><a href="2 Adding and Subtracting Matrices.html">Addition or Subtraction of Matrices</a></li>
+
+    <button class="btn btn-primary"><a href="2 Adding and Subtracting Matrices.html" style="color: white;">Adding or Subtracting Matrices</a></button>
     <p>
       How to add together or subtract from matrices - something to start you off easy!
     </p>
-    <li><a href="3 Multiplying Matrices.html">Multiplying Matrices</a></li>
+
+    <button class="btn btn-primary"><a href="3 Multiplying Matrices.html" style="color: white;">Multiplying Matrices</a></button>
     <p>
       How to multiply a matrix with another, and why A x B is not the same as B x A.
     </p>
-    <li><a href="4 The Determinant and Inverse.html">Finding the Determinant and the Inverse</a></li>
+
+    <button class="btn btn-primary"><a href="4 The Determinant and Inverse.html" style="color: white;">The Determinant and the Inverse</a></button>
     <p>
       What the determinant and the inverse are, how to calculate them, and why they matter.
     </p>
-    <li><a href="5 Cramer's Rule.html">Cramer's Rule</a></li>
+
+    <button class="btn btn-primary"><a href="5 Cramer's Rule.html" style="color: white;">Cramer's Rule</a></button>
     <p>
       Here, we describe what Cramer's rule is and how it can be used.
     </p>
-    <li><a href="6 Applying Matrices to Engineering.html">What uses do we have for Matrices in Engineering?</a></li>
+
+    <button class="btn btn-primary"><a href="6 Applying Matrices to Engineering.html" style="color: white;">Matrices in Engineering</a></button>
     <p>
       Some examples of how matrices are used in engineering - including worked examples.
     </p>
-    <li><a href="7 2x2 Calculator.html">The 2 x 2 Calculator</a></li>
+
+    <button class="btn btn-primary"><a href="7 2x2 Calculator.html" style="color: white;">2 x 2 Matrix Calculator</a></button>
     <p>
       A Calculator covering all the areas of 2 x 2 matrices covered on this website. This Calculator also shows step-by-step methodology.
     </p>
-    <li><a href="10 3x3 Calculator.html">The 3 x 3 Calculator</a></li>
+
+    <button class="btn btn-primary"><a href="10 3x3 Calculator.html" style="color: white;">3 x 3 Matrix Calculator</a></button>
     <p>
       A Calculator covering all the areas of 3 x 3 matrices covered on this website. This Calculator also shows step-by-step methodology.
     </p>
-    <li><a href="8 Quiz Section.html">The Quiz Section</a></li>
+
+    <button class="btn btn-primary"><a href="8 Quiz Section.html" style="color: white;">Quiz Section</a></button>
     <p>
       Test your ability to calculate matrices.
     </p>
-  </ol>
 
+    <button class="btn btn-primary"><a href="9 Circuit Calculator.html" style="color: white;">Circuit Calculator</a></button>
+    <p>
+      Use this page to calculate a limited range of circuits using Mesh Analysis.
+    </p>
 
   <hr size="5">
-  <br>
-  <br>
-  <br>
-  <a href="Contact details.html">Contact the creator of this website</a>
 
-
+  <button class="btn btn-primary"><a href="Contact details.html" style="color: white;">Contact the creator of this website</a></button>
+  <p>
+    <!-- <p>  </p> is a paragraph tab -->
+    <em>This is the dissertation project of <strong>UP938279</strong>. It is supervised by <a href="https://www.port.ac.uk/about-us/structure-and-governance/our-people/our-staff/john-geddes">Dr John Geddes</a>
+      of the University of Portsmouth.</em>
+  </p>
 
 <script src="JS\index.js"></script> <!--links JavasScript to HTML-->
 </body>

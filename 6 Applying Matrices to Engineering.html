@@ -31,7 +31,7 @@
 </head>
 
 <body>
-  <div class="navbar bg-dark" style="position: sticky; top: 00px;">
+  <div class="navbar bg-dark" >
 
 
     <!--  to make a different background colour for the nav bar, use style="background-color: #D77FA1; -->
@@ -71,12 +71,21 @@
 
   </div>
 
+  <div class="topics">
+
+    <h2 id="top">Topics on this page</h2>
+    <button class="btn btn-primary" onclick="topFunction()" class="topButton" id="topButton" style="position:fixed;bottom: 20px; right: 30px; display:none;">Return to the top of the page</button>
+
+  <button class="btn btn-primary">  <a href="#method" style="color: white;">Mesh Analysis method</a></button>
+  <button class="btn btn-primary"><a href="#meshAnalysisExample" style="color: white;">A worked example</a></button>
+  </div>
+
   <p>
     This section assumes a solid understanding of Kirchhoff's Voltage Law, also known as KVL, (The sum of voltages around a loop is zero).
 
   </p>
 
-  <h2>Mesh Analysis</h2>
+  <h2 id="method">Mesh Analysis</h2>
   <p>
     Mesh analysis is used to calculate currents when they are flowing in loops of a circuit. There are 4 steps to follow.
   <ol>
@@ -162,8 +171,8 @@
 
   </p>
   <p>
-    If you are faced with a scenario where you have a <em>current</em> source, use NODAL analysis instead.
-
+    If you are faced with a scenario where you have a <em>current</em> source, use NODAL analysis instead. Although the method for Nodal Analysis is not covered here,
+    it is still possible to use Cramer's Rule to assist your calculations.
   </p>
 
   <!-- <h2>Nodal Analysis</h2>

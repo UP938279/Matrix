@@ -31,7 +31,7 @@
 </head>
 
 <body>
-<div class="navbar bg-dark" style=" position: sticky; top: 00px;">
+<div class="navbar bg-dark" >
 
     <!--  to make a different background colour for the nav bar, use style="background-color: #D77FA1; -->
 
@@ -70,15 +70,19 @@
 
   </div>
 
+  <div class="topics">
 
-  <a href="#theDeterminantExplaination">Click here for an Explanation of the Determinant</a><br>
-  <a href="#determinant2x2Method">Click here for the Method of Calculating the Determinant of a 2 x 2 Matrix</a><br>
-  <a href="#determinant3x3Method">Click here for the Method of Calculating the Determinant of a 3 x 3 Matrix</a><br>
-  <a href="#theInverseExplaination">Click here for an Explanation of the Inverse</a><br>
-  <a href="#determinant2x2Method">Click here for the Method of Calculating the Inverse of a 2 x 2 Matrix</a><br>
-  <a href="#determinant3x3Method">Click here for the Method of Calculating the Inverse of a 3 x 3 Matrix</a><br><br>
+    <h2 id="top">Topics on this page</h2>
+    <button class="btn btn-primary" onclick="topFunction()" class="topButton" id="topButton" style="position:fixed;bottom: 20px; right: 30px; display:none;">Return to the top of the page</button>
 
+  <button class="btn btn-primary">  <a href="#theDeterminantExplaination" style="color: white;">Explanation of the Determinant</a></button>
+  <button class="btn btn-primary"><a href="#determinant2x2Method" style="color: white;">Calculating the Determinant of a 2 x 2 Matrix</a></button>
+  <button class="btn btn-primary"><a href="#determinant3x3Method" style="color: white;">Calculating the Determinant of a 3 x 3 Matrix</a></button>
+  <button class="btn btn-primary"><a href="#theInverseExplaination" style="color: white;">Explanation of the Inverse</a></button>
+  <button class="btn btn-primary"><a href="#determinant2x2Method" style="color: white;">Calculating the Inverse of a 2 x 2 Matrix</a></button>
+  <button class="btn btn-primary"><a href="#determinant3x3Method" style="color: white;">Calculating the Inverse of a 3 x 3 Matrix</a></button>
 
+  </div>
 
   <div class="theDeterminantExplaination">
     <h2 id=theDeterminantExplaination> The Determinant</h2>

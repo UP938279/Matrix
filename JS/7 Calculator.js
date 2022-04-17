@@ -123,6 +123,28 @@ circuitCalculator.onclick = function(){
 }
 //end of navbar hyperlink replacements
 
+
+//Get the button
+var mybutton = document.getElementById("topButton");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
 //function to create random matrix A. When button is clicked, uses random number generator to create numbers from -15 to 15.
 //   Math.round(Math.random()) produces a number that is either 0 or 1. Multiplying by 2 gives either 0 or 2. Subtract 1 gives either -1 or 1.
 //math.round used

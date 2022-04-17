@@ -31,7 +31,7 @@
 </head>
 
 <body>
-  <div class="navbar bg-dark" style="position: sticky; top: 00px;">
+  <div class="navbar bg-dark" >
 
     <!--  to make a different background colour for the nav bar, use style="background-color: #D77FA1; -->
 
@@ -70,9 +70,19 @@
 
   </div>
 
-  <h1>Mesh Analysis Practice</h1>
+  <div class="topics">
+
+    <button class="btn btn-primary" onclick="topFunction()" class="topButton" id="topButton" style="position:fixed;bottom: 20px; right: 30px; display:none;">Return to the top of the page</button>
+
+  <button class="btn btn-primary">  <a href="#circuitOne"><img src="Matrix Website Images\Circuit Calculator Mesh Analysis One.png" alt="Mesh Analysis Calculator Circuit One" style="width:100px;height:88px;"></a></button>
+  <button class="btn btn-primary"><a href="#circuitTwo"><img src="Matrix Website Images\Circuit Calculator Mesh Analysis Two.png" alt="Mesh Analysis Calculator Circuit Two" style="width:100px;height:88px;"></a></button>
+  <button class="btn btn-primary"><a href="#circuitThree"><img src="Matrix Website Images\Circuit Calculator Mesh Analysis Three.png" alt="Mesh Analysis Calculator Circuit Three" style="width:133px;height:88px;"></a></button>
+
+  </div>
+
+  <h2 id="top">Mesh Analysis Practice</h2>
   <p>
-    This section is for you to calculate some mesh analysis circuits.
+    This section is for you to analyse three configurations of circuit using Mesh Analysis.
     You can calculate the circuits here and see how altering the values of each component affects the resultant loop circuits. Answers and methodology are provided for each circuit.
   </p>
 
@@ -123,8 +133,6 @@
 
   </div>
 
-
-
   <div id="circuitTwo" display="block" style="background-color: white;">
     <h2 class="centre">Circuit Two</h2>
 
@@ -171,7 +179,6 @@
     </p>
 
   </div>
-
 
   <div id="circuitThree" display="block" style="background-color: white;">
     <h2 class="centre">Circuit Three</h2>
