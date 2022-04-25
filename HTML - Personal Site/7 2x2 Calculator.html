@@ -6,20 +6,30 @@
 
 <head>
   <meta charset="utf-8">
-  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=IKJcV5hQ09hdo1tX5Ie7PNY2RuujshcUNaqFGJLk5MZ6jFSLwm-2yll6ezPc9pCiAltTzDFStAugSexj4_ORVZWyke4ZXJkiwrCdztQTxKo"
-    charset="UTF-8"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
 
-</head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
 
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<link rel="stylesheet" href="css/styles.css">
-<title>Matrix Calculators</title>
+  <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+  <!-- By using this version of mathjax, inline math works; unable to make it work and display otherwise, would only work with
+equation mode - don't want everything on the same line -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <title>Matrix Calculators</title>
 </head>
 
 <body>
-  <div class="navbar bg-dark">
+  <div class="navbar bg-dark" >
 
     <!--  to make a different background colour for the nav bar, use style="background-color: #D77FA1; -->
 
@@ -38,16 +48,8 @@
     <button id="determinant" class="btn btn-primary">
       The Determinant and the Inverse
     </button>
-
-
     <button id="cramersrule" class="btn btn-primary">
       Cramer's Rule
-    </button>
-    <button id="engineering" class="btn btn-primary">
-      Matrices in Engineering
-    </button>
-    <button id="calculator2x2" class="btn btn-primary">
-      2 x 2 Matrix Calculator
     </button>
     <button id="calculator3x3" class="btn btn-primary">
       3 x 3 Matrix Calculator
@@ -55,43 +57,52 @@
     <button id="quiz" class="btn btn-primary">
       Quiz Section
     </button>
+    <button id="engineering" class="btn btn-primary">
+      Matrices in Engineering
+    </button>
+    <button id="circuitCalculator" class="btn btn-primary">
+      Circuit Calculator
+    </button>
 
   </div>
 
-
-  <div class="matrices">
-
-    <table id="2x2matrixA">
-      <thead>
-        <tr>
-          <th colspan="2">2 x 2 Matrix A</th>
-        </tr>
-      </thead>
-      <tbody>
-
-        <tr>
-          <td><input type="number" name="a1_1" id="a1_1" value="0" /> </td>
-          <td><input type="number" name="a1_2" id="a1_2" value="0" /> </td>
-        </tr>
-
-        <tr>
-          <td><input type="number" name="a2_1" id="a2_1" value="0" /> </td>
-          <td><input type="number" name="a2_2" id="a2_2" value="0" /> </td>
-        </tr>
+  <div class="matrices" style="position: relative; margin:auto; width: 450px; height: 200px;">
+    <div class="matrices" style="position: absolute; top: 0px; left: 10px;">
 
 
-        <td colspan="2">
-          <button id="randomA" class="btn btn-primary">
-            Randomise Matrix A
-          </button>
-        </td>
+      <table id="2x2matrixA" class="matrixACSS">
+        <thead>
+          <tr>
+            <th colspan="2">2 x 2 Matrix A</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td><input class="smallerInput" type="number" name="a1_1" id="a1_1" value="0" /> </td>
+            <td><input class="smallerInput" type="number" name="a1_2" id="a1_2" value="0" /> </td>
+          </tr>
+
+          <tr>
+            <td><input class="smallerInput" type="number" name="a2_1" id="a2_1" value="0" /> </td>
+            <td><input class="smallerInput" type="number" name="a2_2" id="a2_2" value="0" /> </td>
+          </tr>
 
 
-      </tbody>
+          <td colspan="2">
+            <button id="randomA" class="btn btn-primary">
+              Randomise Matrix A
+            </button>
+          </td>
 
 
+        </tbody>
+      </table>
 
-      <table id="2x2MatrixB">
+    </div>
+    <div class="matrices" style="position: absolute; top: 0px; right: 10px;">
+
+      <table id="2x2MatrixB" class="matrixACSS">
         <thead>
           <tr>
             <th colspan="2"> 2 x 2 Matrix B</th>
@@ -99,13 +110,13 @@
         </thead>
         <tbody>
           <tr>
-            <td><input type="number" name="b1_1" id="b1_1" value="0" /> </td>
-            <td><input type="number" name="b1_2" id="b1_2" value="0" /> </td>
+            <td><input class="smallerInput" type="number" name="b1_1" id="b1_1" value="0" /> </td>
+            <td><input class="smallerInput" type="number" name="b1_2" id="b1_2" value="0" /> </td>
           </tr>
 
           <tr>
-            <td><input type="number" name="b2-1" id="b2_1" value="0" /> </td>
-            <td><input type="number" name="b2_2" id="b2_2" value="0" /> </td>
+            <td><input class="smallerInput" type="number" name="b2-1" id="b2_1" value="0" /> </td>
+            <td><input class="smallerInput" type="number" name="b2_2" id="b2_2" value="0" /> </td>
           </tr>
 
           <td colspan="2">
@@ -117,98 +128,110 @@
         </tbody>
       </table>
 
+    </div>
   </div>
-
   <br>
 
 
-  <table class="calcbuttons2x2" class="centre" class="table table-borderless table-sm">
 
-    <tbody>
+<div  role="group" class="centre" style="width:1200px; margin: auto;">
+
+<table class="calcbuttons2x2" class="centre" style="position: relative; margin-left: 10%; margin-right: 10%; text-align: center;">
+  <!-- class="table table-borderless table-sm" -->
+  <tbody>
+
+  <tr class="centre">
+    <td>
+      <button id="inverseA" class="btn btn-primary" class="inverseA" class="calcbuttonsrow1">
+        Inverse A
+      </button>
+    </td>
+    <td>
+      <button id="inverseB" class="btn btn-primary" class="inverseB" class="calcbuttonsrow1">
+        Inverse B
+      </button>
+    </td>
+    <td colspan="2">
+      <button id="transposeA2x2" class="btn btn-primary" class="transposeA2x2" class="calcbuttonsrow1">
+        Transpose Matrix A
+      </button>
+    </td>
+    <td>
+      <button id="transposeB2x2" class="btn btn-primary" class="transposeB2x2" class="calcbuttonsrow1">
+        Transpose Matrix B
+      </button>
+    </td>
+
+    <td>
+      <button id="determinantA2x2" class="btn btn-primary" class="determinantA2x2" class="calcbuttonsrow1">
+        Determinant of Matrix A
+      </button>
+    </td>
+    <td>
+      <button id="determinantB2x2" class="btn btn-primary" class="determinantB2x2">
+        Determinant of Matrix B
+      </button>
+      <button id="copyAnstoA" class="btn btn-primary" class="copyAnstoA">
+        Copy the resultant Matrix to Matrix A
+      </button>
+    </td>
+</tr>
+
+
+    <tr class="centre">
       <td>
-        <button id="inverseA" class="btn btn-primary" class="inverseA" class="calcbuttonsrow1">
-          Inverse A
+        <button id="addition2x2" class="btn btn-primary" class="addition2x2">
+          A + B
         </button>
       </td>
       <td>
-        <button id="inverseB" class="btn btn-primary" class="inverseB" class="calcbuttonsrow1">
-          Inverse B
+        <button id="subtraction2x2AminusB" class="btn btn-primary" class="subtraction2x2AminusB">
+          A - B
         </button>
       </td>
       <td>
-        <button id="transposeA2x2" class="btn btn-primary" class="transposeA2x2" class="calcbuttonsrow1">
-          Transpose Matrix A
+        <button id="subtraction2x2BminusA" class="btn btn-primary" class="subtraction2x2BminusA">
+          B - A
         </button>
       </td>
       <td>
-        <button id="transposeB2x2" class="btn btn-primary" class="transposeB2x2" class="calcbuttonsrow1">
-          Transpose Matrix B
-        </button>
-      </td>
-
-      <td>
-        <button id="determinantA2x2" class="btn btn-primary" class="determinantA2x2" class="calcbuttonsrow1">
-          Determinant of Matrix A
+        <button id="multiplyAB2x2" class="btn btn-primary" class="multiplyAB2x2">
+          A x B
         </button>
       </td>
       <td>
-        <button id="determinantB2x2" class="btn btn-primary" class="determinantB2x2">
-          Determinant of Matrix B
+        <button id="multiplyBA2x2" class="btn btn-primary" class="multiplyBA2x2">
+          B x A
         </button>
       </td>
-      </tr>
+      <td>
 
-      <tr>
+        <button id="scalarA" class="btn btn-primary" class="magnitudeA">
+          <input type="number" id="scalarA2x2" name="scalarA" value="1" style="width:80px">
+          <br>Multiply Matrix A by Scalar
+        </button>
+      </td>
+      <td>
+        <button id="scalarB" class="btn btn-primary" class="magnitudeB">
+          <input id="scalarB2x2" type="number" name="scalarB" value="1" style="width:80px">
+          <br> Multiply Matrix B by Scalar
+        </button>
+        <button id="copyAnstoB" class="btn btn-primary" class="copyAnstoB">
+          Copy the resultant Matrix to Matrix B
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
+</div>
 
-        <td>
-          <button id="addition2x2" class="btn btn-primary" class="addition2x2">
-            A + B
-          </button>
-        </td>
-        <td>
-          <button id="subtraction2x2AminusB" class="btn btn-primary" class="subtraction2x2AminusB">
-            A - B
-          </button>
-        </td>
-        <td>
-          <button id="subtraction2x2BminusA" class="btn btn-primary" class="subtraction2x2BminusA">
-            B - A
-          </button>
-        </td>
-        <td>
-          <button id="multiplyAB2x2" class="btn btn-primary" class="multiplyAB2x2">
-            A x B
-          </button>
-        </td>
-        <td>
-          <button id="multiplyBA2x2" class="btn btn-primary" class="multiplyBA2x2">
-            B x A
-          </button>
-        </td>
-        <td>
-
-          <button id="scalarA" class="btn btn-primary" class="magnitudeA">
-            <input type="number" id="scalarA2x2" name="scalarA" value="1" style="width:80px">
-            <br>Multiply Matrix A by Scalar
-          </button>
-        </td>
-        <td>
-          <!-- can use the same entry field as Magnitude A? Not implemented here-->
-
-          <button id="scalarB" class="btn btn-primary" class="magnitudeB">
-            <input id="scalarB2x2" type="number" name="scalarB" value="1" style="width:80px">
-            <br> Multiply Matrix B by Scalar
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
 
 
   <div class="answers" class="centre">
-    <table id="answerTable">
-      <h2>Your answers are in this matrix</h2>
+    <!-- Former display was using a table, as demonstrated here. Would need to delete/edit certain parts of the JS as relies on this existing/ Rather
+than do this, have hidden this element. Takes no space and allows reversion, as well as reduced editing. -->
+    <table id="answerTable" style="display: none;">
       <hr>
       <tr>
         <th><input type="number" name="ans1_1" id="ans1_1" value="0"></th>
@@ -218,28 +241,63 @@
         <th><input type="number" name="ans2_1" id="ans2_1" value="0"></th>
         <th><input type="number" name="ans2_2" id="ans2_2" value="0"></th>
       </tr>
-
-
-
     </table>
-    <p id="determinantAns" class="determinantAns">
+
+    <p id="ansMathJaxMatrix" class="centre" style="display: none;">
     </p>
 
-      <button type="button" class="btn btn-primary" id="showSteps">Show Steps</button>
+    <p id="determinantAns" class="determinantAns" style="display: none;">
+    </p>
 
-
-<p class="invisible">Write Steps</p>
   </div>
 
 
 
-  <hr>
+
+  <div id="stepsDiv" class="invisibleSteps">
+    <button type="button" id=stepsOneButton class="btn btn-primary" style="display: none;">Show First Step</button>
+
+    <p class="steps1" class="btn btn-primary" id="stepsOne" style="display: none;">
+      Step 1
+    </p>
+    <button type="button" class="btn btn-primary" class="steps" id="stepsTwoButton" style="display: none;">Show Second Step</button>
+
+    <p class="steps2" id="stepsTwo" style="display: none;">
+      Step 2
+    </p>
+    <button type="button" class="btn btn-primary" class="steps" id="stepsThreeButton" style="display: none;">Show Third Step</button>
+
+    <p class="steps3" id="stepsThree" style="display: none;">
+      Step 3
+      <br>
+    </p>
+    <button type="button" class="btn btn-primary" class="steps" id="stepsFourButton" style="display: none;">Show Fourth Step</button>
+
+    <p class="steps4" id="stepsFour" style="display: none;">
+      Step 4
+      <br>
+    </p>
+    <button type="button" class="btn btn-primary" class="steps" id="stepsFiveButton" style="display: none;">Show Fifth Step</button>
+
+    <p id="stepsFive" class="steps5" style="display: none;">
+      Step 5
+      <br>
+    </p>
+    <button type="button" class="btn btn-primary" class="steps" id="stepsSixButton" style="display: none;">Show Sixth Step</button>
+
+    <button type="button" class="btn btn-primary" class="steps" id="workedSolutionButton" style="display: none;">Worked Solution</button>
+    <p id="workedSolution" class="workedSolution" style="display: none; margin:auto; max-width: 500px;">
+      Worked Solution edit
+      <br>
+    </p>
 
 
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
   <script src="JS\7 Calculator.js"></script>
   <!--links JavasScript to HTML-->
+  <!-- jquery currently unused, but "just in case" -->
 </body>
 
 </html>

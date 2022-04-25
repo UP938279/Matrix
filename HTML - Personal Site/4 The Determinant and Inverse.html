@@ -31,7 +31,7 @@
 </head>
 
 <body>
-  <div class="navbar bg-dark">
+<div class="navbar bg-dark" >
 
     <!--  to make a different background colour for the nav bar, use style="background-color: #D77FA1; -->
 
@@ -52,9 +52,6 @@
     <button id="cramersrule" class="btn btn-primary">
       Cramer's Rule
     </button>
-    <button id="engineering" class="btn btn-primary">
-      Matrices in Engineering
-    </button>
     <button id="calculator2x2" class="btn btn-primary">
       2 x 2 Matrix Calculator
     </button>
@@ -64,76 +61,115 @@
     <button id="quiz" class="btn btn-primary">
       Quiz Section
     </button>
+    <button id="engineering" class="btn btn-primary">
+      Matrices in Engineering
+    </button>
+    <button id="circuitCalculator" class="btn btn-primary">
+      Circuit Calculator
+    </button>
 
   </div>
 
+  <div class="topics">
 
-  <a href="#theDeterminantExplaination">Click here for an Explanation of the Determinant</a><br>
-  <a href="#determinant2x2Method">Click here for the Method of Calculating the Determinant of a 2 x 2 Matrix</a><br>
-  <a href="#determinant3x3Method">Click here for the Method of Calculating the Determinant of a 3 x 3 Matrix</a><br>
-  <a href="#theInverseExplaination">Click here for an Explanation of the Inverse</a><br>
-  <a href="#determinant2x2Method">Click here for the Method of Calculating the Inverse of a 2 x 2 Matrix</a><br>
-  <a href="#determinant3x3Method">Click here for the Method of Calculating the Inverse of a 3 x 3 Matrix</a><br><br>
+    <h2 id="top">Topics on this page</h2>
+    <button class="btn btn-primary" onclick="topFunction()" class="topButton" id="topButton" style="position:fixed;bottom: 20px; right: 30px; display:none;">Return to the top of the page</button>
 
+  <button class="btn btn-primary" style="font-size:12px;" id="pagelink1">Explanation of the Determinant</button>
+  <button class="btn btn-primary" style="font-size:12px;" id="pagelink2">Calculating the Determinant of a 2 x 2 Matrix</button>
+  <button class="btn btn-primary" style="font-size:12px;" id="pagelink3">Calculating the Determinant of a 3 x 3 Matrix</button>
+  <button class="btn btn-primary" style="font-size:12px;" id="pagelink4">Explanation of the Inverse</button>
+  <button class="btn btn-primary" style="font-size:12px;" id="pagelink5">Calculating the Inverse of a 2 x 2 Matrix</button>
+  <button class="btn btn-primary" style="font-size:12px;" id="pagelink6">Calculating the Inverse of a 3 x 3 Matrix</button>
 
+  </div>
 
   <div class="theDeterminantExplaination">
     <h2 id=theDeterminantExplaination> The Determinant</h2>
     <p>
       Every square matrix has a quality associated with it, called the determinant. It can be used to solve sets of equations.
-      The determinant of a matrix can be denoted in three ways - det($A$), det $A$, or $\begin{vmatrix}A\end{vmatrix}$.
+      The determinant of a matrix can be denoted in three ways - $det(A)$, $det A$, or $\begin{vmatrix}A\end{vmatrix}$.
     </p>
   </div>
-
+  <br>
   <div class="determinant2x2Method">
     <h2 id=determinant2x2Method> Calculating the Determinant of a 2 x 2 Matrix</h2>
     <p>
       <br>
-      det $\begin{bmatrix}a&b\\c&d\end{bmatrix} =\begin{vmatrix}a & b\\c & d\end{vmatrix} = ad-bc$
-      <br><br>
-      As an example:&ensp;&ensp;&ensp; det$\begin{bmatrix}2&4\\3&5\end{bmatrix} =\begin{vmatrix}2 & 4\\3 & 5\end{vmatrix} = 10-12 = -2$
+      $det (A) \begin{bmatrix}a&b\\c&d\end{bmatrix} =\begin{vmatrix}a & b\\c & d\end{vmatrix} = ad-bc$
+      <br><br><br>
+      As an example:&ensp;&ensp;&ensp; $det (A) \begin{bmatrix}2&4\\3&5\end{bmatrix} =\begin{vmatrix}2 & 4\\3 & 5\end{vmatrix} = 10-12 = -2$
 
     </p>
   </div>
+  <br><br>
 
   <div class="determinant3x3Method">
     <h2 id=determinant3x3Method> Calculating the Determinant of a 3 x 3 Matrix</h2>
+    <br>
     <p>
-      det $\begin{bmatrix}a&b&c\\d&e&f\\g&h&i\end{bmatrix} =\begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix} = a\begin{vmatrix}e&f\\h&i\end{vmatrix}
-      -b\begin{vmatrix}d&f\\g&i\end{vmatrix}+c\begin{vmatrix}d&e\\g&h\end{vmatrix}&ensp; = &ensp; aei+bfg+cdh-ceg-bdi-afh$
-      <br><br>
-      As an example:&ensp;&ensp;&ensp;det $\begin{bmatrix}1&2&3\\4&5&6\\7&8&9\end{bmatrix}
+      We can write a 3 x 3 matrix as so:&ensp;&ensp; $\begin{bmatrix}a&b&c\\d&e&f\\g&h&i\end{bmatrix}$
+    <ol>
+      <li>Multiply a by the determinant of the 2 x 2 matrix that is not in the same row or column as a</li>
+      <li>Do the same for <em>-b</em> </li>
+      <li>Do the same for c</li>
+      <li>Add them all together</li>
+    </ol>
+    <br>
+    </p>
+    <p>This could also be written as so:
+      $$det (A) \begin{bmatrix}a&b&c\\d&e&f\\g&h&i\end{bmatrix} =\begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix} = a\begin{vmatrix}e&f\\h&i\end{vmatrix}
+      -b\begin{vmatrix}d&f\\g&i\end{vmatrix}+c\begin{vmatrix}d&e\\g&h\end{vmatrix}&ensp; = &ensp; aei+bfg+cdh-ceg-bdi-afh$$
+      <br><br><br>
+      As an example:&ensp;&ensp;&ensp;$det (A) \begin{bmatrix}1&2&3\\4&5&6\\7&8&9\end{bmatrix}
       =\begin{vmatrix}1&2&3\\4&5&6\\7&8&9\end{vmatrix} =
       1\begin{vmatrix}5&6\\8&9\end{vmatrix}-2\begin{vmatrix}4&6\\7&9\end{vmatrix}+3\begin{vmatrix}4&5\\7&8\end{vmatrix}&ensp;
       <br>
-      = &ensp; 1\cdot$$(5$ x $9) + 2\cdot(6$ x $7) + 3\cdot(4$ x $8) - 3\cdot(5$ x $7) - 2\cdot(4$ x $9) - 1\cdot(6$ x $8)$
+      = &ensp; 1\cdot$$(5$ x $9) + 2\cdot(6$ x $7) + 3\cdot(4$ x $8) - 3\cdot(5$ x $7) - 2\cdot(4$ x $9) - 1\cdot(6$ x $8) = 0$
     </p>
   </div>
-
+  <br><br>
   <div class="theInverseExplaination">
     <h2 id=theInverseExplaination> The Inverse of a Matrix</h2>
     <p>
-      Every square matrix has a quality associated with it, called the determinant. It can be used to solve sets of equations.
-      The determinant of a matrix can be denoted in three ways - det($A$), det $A$, or $\begin{vmatrix}A\end{vmatrix}$.
+    The inverse of a square matrix $A$ is usually denoted as $A^{-1}$. It is the matrix by which the original matrix $A$ should be multiplied to get
+    the identity matrix i.e. $AA^{-1} = A^{-1}A = I$
     </p>
   </div>
-
+  <br><br>
   <div class="inverse2x2Method">
     <h2 id=inverse2x2Method> Calculating the Inverse of a 2 x 2 Matrix</h2>
     <p>
-      \begin{bmatrix}a&b\\c&d\end{bmatrix}^{-1} =\dfrac{\begin{bmatrix}d&-b\\-c&a\end{bmatrix}}
-      {\begin{vmatrix}a&b\\c&d\end{vmatrix}} = \dfrac1{ad-bc}{\begin{bmatrix}d&-b\\-c&a\end{bmatrix}}
+      $\begin{bmatrix}a&b\\c&d\end{bmatrix}^{-1} =\dfrac{\begin{bmatrix}d&-b\\-c&a\end{bmatrix}}
+      {\begin{vmatrix}a&b\\c&d\end{vmatrix}} = \dfrac1{ad-bc}{\begin{bmatrix}d&-b\\-c&a\end{bmatrix}}$
     </p>
   </div>
-
+  <br><br>
   <div class="inverse3x3Method">
     <h2 id=inverse3x3Method> Calculating the Inverse of a 3 x 3 Matrix</h2>
     <p>
-      Every square matrix has a quality associated with it, called the determinant. It can be used to solve sets of equations.
-      The determinant of a matrix can be denoted in three ways - det($A$), det $A$, or $\begin{vmatrix}A\end{vmatrix}$.
+    <ol>
+      <li>Find the determinant of the matrix. If the determinant is 0, there is no inverse matrix: $det (A) \begin{bmatrix}a&b&c\\d&e&f\\g&h&i\end{bmatrix}
+        = &ensp; aei+bfg+cdh-ceg-bdi-afh$</li>
+      <li>Transpose the original matrix: $A ^T = \begin{bmatrix}a&d&g\\b&e&h\\c&f&i\end{bmatrix}$ <br><br> </li>
+      <li> Replace each element with the determinant of its 2 x 2 "minor" matrix. Disregard the row and column of the element you are focusing on, and calculate the determinant of
+      the remaining values.  <br><br>  i.e. For $a$, the minor matrix will be the 2 x 2 matrix including $e, f, h$ and $i$ &ensp;= &ensp;$\begin{bmatrix} \huge{a}
+      & \small{b}& \small{c}\\\small{d}& \huge{e}& \huge{f}\\\small{g}& \huge{h}& \huge{i}\end{bmatrix}$
+      <br><br>In this example, the value $a$ would be replaced by the value of $ei-fh$<br><br>
+    </li>
+      <li>Apply the matrix of co-factors to this new matrix. This is done by reversing the sign of alternate elements, with the first element
+         keeping its original sign.<br><br>This pattern looks similar to a chessboard. As a visual example: &ensp;&ensp;$\begin{bmatrix} +& - & +\\ - & +& - \\ +& - & +\end{bmatrix}$  </li>
+        <br>What you have now is known as the <em>Adjugate</em> Matrix.<br><br>
+      <li> Divide each term of the adjugate matrix by the determinant &ensp;= $A^{-1} &ensp; = &ensp;\dfrac1{det (A)} \begin{bmatrix}Adj
+        (A)\end{bmatrix}$ </li>
+    </ol>
+    </p>
+
+    <p>
+
     </p>
   </div>
-<script src="JS\4 The Determinant and Inverse.js"></script>
+  <script src="JS\4 The Determinant and Inverse.js"></script>
 </body>
 
 </html>

@@ -33,12 +33,9 @@
   <link rel="icon" href="favicon.ico">
   <!--not working in chrome, unknown reason. Possibly as local not online-->
 </head>
-<p>
-  <a href="C:\Users\Student\Desktop\Individual Project\Web Development\HTML - Personal Site\index.html">Return to Welcome page</a>
-</p>
 
 <body>
-  <div class="navbar bg-dark">
+<div class="navbar bg-dark" >
 
     <!--  to make a different background colour for the nav bar, use style="background-color: #D77FA1; -->
 
@@ -61,9 +58,6 @@
     <button id="cramersrule" class="btn btn-primary">
       Cramer's Rule
     </button>
-    <button id="engineering" class="btn btn-primary">
-      Matrices in Engineering
-    </button>
     <button id="calculator2x2" class="btn btn-primary">
       2 x 2 Matrix Calculator
     </button>
@@ -73,17 +67,28 @@
     <button id="quiz" class="btn btn-primary">
       Quiz Section
     </button>
+    <button id="engineering" class="btn btn-primary">
+      Matrices in Engineering
+    </button>
+    <button id="circuitCalculator" class="btn btn-primary">
+      Circuit Calculator
+    </button>
 
   </div>
-  <a href="#multiplybyscalar">How to Multiply a Matrix with a Scalar</a><br>
-  <a href="#multiplybymatrix">How to Multiply a Matrix with Another Matrix</a><br>
-  <a href="#example3x3Multiply">A Worked Example of How to Multiply a Matrix with Another Matrix</a><br>
-  <a href="#AxBdoesnotequalBxA">A x B ≠ B x A - Why it matters which Matrix is A and which is B</a>
 
+<div class="topics">
+  <h2 id="top">Topics on this page</h2>
+  <button class="btn btn-primary" onclick="topFunction()" class="topButton" id="topButton" style="position:fixed;bottom: 20px; right: 30px; display:none;">Return to the top of the page</button>
 
+<button class="btn btn-primary" style="font-size:12px;" id="pagelink1">How to Multiply a Matrix with a Scalar</a></button>
+<button class="btn btn-primary" style="font-size:12px;" id="pagelink2">How to Multiply a Matrix with Another Matrix</a></button>
+<button class="btn btn-primary" style="font-size:12px;" id="pagelink3">A Worked Example of How to Multiply a Matrix with Another Matrix</a></button>
+<button class="btn btn-primary" style="font-size:12px;" id="pagelink4">A x B ≠ B x A - Why it matters which Matrix is A and which is B</a></button>
+
+</div>
 
   <div class="multiplyByScalarDescription">
-    <h2 id=multiplybyscalar>How to Multiply by a Scalar</h2>
+    <h2 id=multiplybyscalar class="anchor">How to Multiply by a Scalar</h2>
     <p>
       A matrix can be multiplied by a scalar, $\lambda$ (real number). You do this by multiplying every element by $\lambda$. The final matrix has the same dimensions as the original matrix.
       <br><br>
@@ -105,7 +110,7 @@
 
 
   <div class="multiplyByMatrixDescription">
-    <h2 id=multiplybymatrix>How to Multiply with Another Matrix</h2>
+    <h2 id=multiplybymatrix class="anchor">How to Multiply with Another Matrix</h2>
     <p>
       For the matrix $AB$ to exist, the number of columns ($n$) in Matrix $A$ must be equal to the number of rows ($m$) in Matrix $B$.
       This will give a matrix with dimensions $m$ x $l$.
@@ -153,8 +158,8 @@
     </table>
     <br><br>
     <p>
-      You calculate the dot product of the first row of the first matrix by the corresponding member of the first column of the second matrix
-      i.e. $a{_1}{_,}{_1}$ x $b{_1}{_,}{_1}$ + $a{_1}{_,}{_2}$ x $b{_2}{_,}{_1}$ (for a 2-rowed matrix $a$ and a 2-columned matrix $b$)
+      Calculate the dot product of the first row of the first matrix by the corresponding member of the first column of the second matrix
+      i.e. $a{_1}{_,}{_1}$ x $b{_1}{_,}{_1}$ + $a{_1}{_,}{_2}$ x $b{_2}{_,}{_1}$ (for a 2-rowed matrix $a$ and a 2-columned matrix $b$).
       <br>
       This will give you the element of the first row and first column of your new matrix; element $a{_1}{_,}{_1}$.
       <br>
@@ -165,7 +170,8 @@
   <br>
   <br>
 
-  <p id=example3x3Multiply>
+<h3 id=example3x3Multiply class="anchor">An example</h3>
+  <p>
 
     Let's do an example with numbers, to try and make things clearer.
     <br>
@@ -184,7 +190,7 @@
   </p>
 
   <div class="AxBdoesnotequalBxADescription">
-    <h2 id=AxBdoesnotequalBxA>A x B ≠ B x A</h2>
+    <h2 id=axBdoesnotequalBxA class="anchor">A x B ≠ B x A</h2>
     <p>
       It is <em>vital</em> to note that multiplying A x B does not equal B x A. Because of the way that it is calculated, the resultant
       matrix will <i>likely</i> be different. Depending upon what numbers are in each matrix, it may be possible to get the same resultant
